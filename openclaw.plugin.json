@@ -1,0 +1,52 @@
+{
+  "id": "openai-custom-stt",
+  "name": "OpenAI Custom STT",
+  "description": "Media-understanding provider for OpenAI-compatible audio transcription against a configurable remote host",
+  "providers": ["openai-custom-stt"],
+  "contracts": {
+    "mediaUnderstandingProviders": ["openai-custom-stt"]
+  },
+  "uiHints": {
+    "baseUrl": {
+      "label": "Base URL",
+      "placeholder": "http://127.0.0.1:8000/v1"
+    },
+    "apiKey": {
+      "label": "API key",
+      "sensitive": true
+    },
+    "authToken": {
+      "label": "Bearer token",
+      "sensitive": true
+    },
+    "authHeaderName": {
+      "label": "Auth header name",
+      "placeholder": "Authorization"
+    },
+    "defaultModel": {
+      "label": "Default transcription model",
+      "placeholder": "whisper-1"
+    },
+    "requestTimeoutMs": {
+      "label": "Request timeout (ms)"
+    }
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "baseUrl": { "type": "string" },
+      "apiKey": { "type": "string" },
+      "authToken": { "type": "string" },
+      "authHeaderName": { "type": "string" },
+      "defaultModel": { "type": "string" },
+      "requestTimeoutMs": { "type": "number" },
+      "defaultLanguage": { "type": "string" },
+      "defaultPrompt": { "type": "string" },
+      "additionalHeaders": {
+        "type": "object",
+        "additionalProperties": { "type": "string" }
+      }
+    }
+  }
+}
