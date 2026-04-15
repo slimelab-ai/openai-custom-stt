@@ -61,3 +61,7 @@ Configure media transcription to use provider id `openai-custom-stt` instead of 
 ## Development
 
 This repo is intentionally tiny and unbundled, matching the VoxCPM2 pattern.
+
+## Recommended use
+
+This plugin is especially useful with [Speaches](https://speaches.ai/) or other OpenAI-compatible speech backends that expose a `/audio/transcriptions` endpoint.
