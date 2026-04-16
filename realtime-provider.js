@@ -134,7 +134,7 @@ class OpenAiCustomRealtimeTranscriptionSession {
         this.connected = true;
         this.reconnectAttempts = 0;
         this.sendEvent({
-          type: "transcription_session.update",
+          type: "session.update",
           session: {
             input_audio_format: "g711_ulaw",
             input_audio_transcription: { model: this.config.model },
