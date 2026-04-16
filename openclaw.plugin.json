@@ -4,7 +4,8 @@
   "description": "Media-understanding provider for OpenAI-compatible audio transcription against a configurable remote host",
   "providers": ["openai-custom-stt"],
   "contracts": {
-    "mediaUnderstandingProviders": ["openai-custom-stt"]
+    "mediaUnderstandingProviders": ["openai-custom-stt"],
+    "realtimeTranscriptionProviders": ["openai-custom-stt"]
   },
   "uiHints": {
     "baseUrl": {
@@ -29,6 +30,16 @@
     },
     "requestTimeoutMs": {
       "label": "Request timeout (ms)"
+    },
+    "streamingModel": {
+      "label": "Realtime transcription model",
+      "placeholder": "whisper-1"
+    },
+    "silenceDurationMs": {
+      "label": "Realtime silence duration (ms)"
+    },
+    "vadThreshold": {
+      "label": "Realtime VAD threshold"
     }
   },
   "configSchema": {
@@ -41,6 +52,9 @@
       "authHeaderName": { "type": "string" },
       "defaultModel": { "type": "string" },
       "requestTimeoutMs": { "type": "number" },
+      "streamingModel": { "type": "string" },
+      "silenceDurationMs": { "type": "number" },
+      "vadThreshold": { "type": "number" },
       "defaultLanguage": { "type": "string" },
       "defaultPrompt": { "type": "string" },
       "additionalHeaders": {

@@ -1,8 +1,11 @@
 {
   "name": "@slimelab-ai/openai-custom-stt",
   "version": "0.1.0",
-  "description": "OpenClaw media-understanding plugin for OpenAI-compatible speech-to-text with configurable remote host",
+  "description": "OpenClaw media-understanding and realtime transcription plugin for OpenAI-compatible speech-to-text with configurable remote host",
   "type": "module",
+  "dependencies": {
+    "ws": "^8.18.3"
+  },
   "openclaw": {
     "extensions": [
       "./index.js"
