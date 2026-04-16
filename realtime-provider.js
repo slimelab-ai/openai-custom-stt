@@ -136,7 +136,6 @@ class OpenAiCustomRealtimeTranscriptionSession {
         this.sendEvent({
           type: "session.update",
           session: {
-            input_audio_transcription: { model: this.config.model },
             turn_detection: {
               type: "server_vad",
               threshold: this.config.vadThreshold,
